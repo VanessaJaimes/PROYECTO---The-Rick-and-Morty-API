@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Market Mix Rick and Morty</title>
+  
+</head>
+<body>
+
+   
+  
+  <main class="main">
+
+          
+      <div  v-if="!loginExitoso" class="">
+        <h2>Login de usuarios</h2>
+        <h4>ingrese su usuario</h4>
+        
+          <form class="" @submit.prevent="">
+            <input type="text" id="user"  placeholder="usuario" >
+            <input type="password" id="pass" placeholder="Clave"  >
+            <input type="email" id="gmail" placeholder="Correo" >
+
+            <button  @click="login">Login</button>
+            <button @click="registro">Registro</button>
+            
+          </form>
+      </div>
+
+      
+
+      <div  v-if="!registroExitoso" class="">
+        <h2>Registro</h2>
+        <h4>ingrese sus datos de resgistro</h4>
+        
+          <form class="" @submit.prevent="">
+            <input type="text" id="user"  placeholder="usuario" required>
+            <input type="password" id="pass" placeholder="Clave" required>
+            <input type="email" id="gmail" placeholder="Correo" required>
+
+            <button @click="login">Login</button>
+          </form>
+      </div>
+
+      <div v-model="">
+        <h1>holis</h1>
+        <h2>vista de usuario</h2>
+      </div>
+     
+    
+  </main>
+
+</body>
+      
+  <!-- Este es el CDN de Vue -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <!-- Mando a llamar al login que es el archivo principal -->
+  <script src="./main.js" ></script>
