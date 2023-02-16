@@ -11,6 +11,7 @@ const main = Vue.createApp({
 
   };
 },
+
 methods: {
   login() {
    let usuario = this.usuarios.find(u => u.user === this.user && u.clave === this.clave);
@@ -33,6 +34,7 @@ methods: {
       });
       alert("Usuario Registrado Exitosamente");
       this.registroExitoso = true;
+      console.log(usuarios)
     }else{
       alert("Debe completar todos los campos");
       this.registroExitoso = false;
