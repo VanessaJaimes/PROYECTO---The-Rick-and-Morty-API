@@ -16,45 +16,43 @@
   <main class="main">
 
           
-      <div  v-if="!loginExitoso" class="">
-        <h2>Login de usuarios</h2>
-        <h4>ingrese su usuario</h4>
-        
-          <form class="" @submit.prevent="">
-            <input type="text" id="user"  placeholder="usuario" >
-            <input type="password" id="pass" placeholder="Clave"  >
-            <input type="email" id="gmail" placeholder="Correo" >
-
-            <button  @click="login">Login</button>
-            <button @click="registro">Registro</button>
-            
-          </form>
-      </div>
-
+    <div  v-if="!loginExitoso" class="">
+      <h2>Login de usuarios</h2>
+      <h4>ingrese su usuario</h4>
       
+        <form class="" @submit.prevent="">
+          <input type="text" id="user" v-model="user" placeholder="usuario" required>
+          <input type="password" id="pass" v-model="clave" placeholder="Clave"  required>
+          <input type="email" id="gmail" v-model="gmail" placeholder="Correo" required>
 
-      <div  v-if="!registroExitoso" class="">
-        <h2>Registro</h2>
-        <h4>ingrese sus datos de resgistro</h4>
-        
-          <form class="" @submit.prevent="">
-            <input type="text" id="user"  placeholder="usuario" required>
-            <input type="password" id="pass" placeholder="Clave" required>
-            <input type="email" id="gmail" placeholder="Correo" required>
+          <button  @click="login">Login</button>
+          <button @click="registro">Registro</button>
+          
+        </form>
+    </div>
 
-            <button @click="login">Login</button>
-          </form>
-      </div>
-
-      <div v-model="">
-        <h1>holis</h1>
-        <h2>vista de usuario</h2>
-      </div>
-     
     
-  </main>
+
+    <div  v-if="!registroExitoso" class="">
+      <h2>Registro</h2>
+      <h4>ingrese sus datos de resgistro</h4>
+      
+        <form class="" @submit.prevent="">
+          <input type="text" id="user" v-model="user" placeholder="usuario" required>
+          <input type="password" id="pass" v-model="clave" placeholder="Clave" required>
+          <input type="email" id="gmail" v-model="gmail" placeholder="Correo" required>
+
+          <button @click="registro">Login</button>
+        </form>
+    </div>
+
+    <div v-model="">
+      <h1>holis</h1>
+      <h2>vista de usuario</h2>
+    </div>
 
 </body>
+</html>
       
   <!-- Este es el CDN de Vue -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
