@@ -34,7 +34,7 @@ methods: {
       });
       alert("Usuario Registrado Exitosamente");
       this.registroExitoso = true;
-      console.log(usuarios)
+   
     }else{
       alert("Debe completar todos los campos");
       this.registroExitoso = false;
