@@ -22,9 +22,9 @@
       <h4>ingrese su usuario</h4>
       
         <form class="" @submit.prevent>
-          <input type="text" id="user" v-model="user" placeholder="usuario" required>
-          <input type="password" id="pass" maxlength="4" v-model="clave" placeholder="Clave"  required>
-          <input type="email" id="gmail" v-model="gmail" placeholder="Correo" required>
+          <input type="text" id="user" v-model="user" title="Ingre su usuario" placeholder="usuario" required>
+          <input type="password" id="pass" maxlength="4" title="Ingrese su clave de 4 digitos" v-model="clave" placeholder="Clave"  required>
+          <input type="email" id="gmail" v-model="gmail" title="Ingrese su correo" placeholder="Correo" required>
           <h4>No Tienes usuario?</h4>
           <p>Registro Ahora</p>
           <button  @click="login">Login</button>
@@ -41,16 +41,15 @@
       <h4>ingrese sus datos de resgistro</h4>
       
         <form class="" @submit.prevent>
-          <input type="text" id="user"  v-model="user" placeholder="usuario" required>
-          <input type="password" id="pass" maxlength="4" v-model="clave" placeholder="Clave" required>
-          <input type="email" id="gmail"  v-model="gmail" placeholder="Correo" required>
+          <input type="text" id="user"  v-model="user" title="Ingre su usuario" placeholder="usuario" required>
+          <input type="password" id="pass" maxlength="4" title="Ingrese una clave de 4 digitos" v-model="clave" placeholder="Clave" required>
+          <input type="email" id="gmail"  v-model="gmail" title="Ingrese su correo" placeholder="Correo" required>
 
           <button @click="registro">Registro</button>
         </form>
     </div>
 
     <div >
-      
       <h2>vista de usuario</h2>
       
     </div>
