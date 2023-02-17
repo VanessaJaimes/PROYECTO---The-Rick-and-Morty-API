@@ -5,37 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="Expires" content="0">
-    <meta http-equiv="Last-Modified" content="0">
-    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
-    <meta http-equiv="Pragma" content="no-cache">
     <link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
     <link rel="shortcut icon" href="/img/Rick_y_Morty_Serie_de_TV-157026175-large.jpg" type="image/x-icon">
-    <title>Registro</title>
+    <title>Login</title>
 </head>
 
-<div class="container" id="app">
-    <form class="form" method="POST">
-        <h2>{{titulo}}</h2>
-        <p type="Nombres:"><input placeholder="Ingresa tu nombre.." type="text" required id="nombre" name="nombre"
-                maxlength="15" minlength="3" v-model="nombres" v-on:keyup.enter="agregarUsuario"></input></p>
-        <p type="Apellidos:"><input placeholder="Ingresa tu apellido.." type="text" required id="apellido"
-                name="apellido" maxlength="15" minlength="3" v-model="apellidos"
-                v-on:keyup.enter="agregarUsuario"></input></p>
-        <p type="Usuario:"><input placeholder="Ingresa tu nuevo usuario.." type="text" required id="usuario"
-                name="usuario" maxlength="15" minlength="4" v-model="nuevoUsuario"
-                v-on:keyup.enter="agregarUsuario"></input></p>
-        <p type="Fecha de nacimiento:"><input placeholder="Ingresa tu fecha de nacimiento.." type="date" required
-                id="date" name="date" min="1930-01-01" max="2016-12-31" v-model="fecha_nac"
-                v-on:keyup.enter="agregarUsuario"></input></p>
-        <button class="boton" type="submit" style="margin: 10px" @click="agregarUsuario" @click="calcularEdad">Guardar
-        </button>
-        <a class="boton" href="login.html" style="margin: 10px">Sign In</a>
-        <h6 class="message">Ya esta registrado?</h6>
-</div>
-</form>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
-<script src="/js/app.js"></script>
+<body>
+    <div class="divlogin">
+        <div class="container">
+            <div class="divcont">
+                <h3>{{ title }}</h3>
+                <form @submit.prevent="sendForm()">
+                    <input type="email" :class="{'error':validaEmail}" placeholder="Email" v-model="form.email">
+                    <input type="password" v-if="form.type!=2" :class="{'error':validaPassword}" placeholder="Contraseña" v-model="form.password" >
+                    <input type="password" v-if="form.type==1" :class="{'error':validaRepetirPassword}" placeholder="Repetir contraseña" v-model="form.passwordos" >
+                    <button>Iniciar sesión</button>
+                    <a href="javascript:void(0)" @click="form.type=2" v-if="form.type!=2" >Recuper contraseña</a>
+                    <a href="javascript:void(0)" @click="form.type=1" v-if="form.type!=1" >Registrarme</a>
+                    <a href="javascript:void(0)" @click="form.type=0" v-if="form.type!=0" >Iniciar sesión</a>
+                </form>
+            </div>            
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
