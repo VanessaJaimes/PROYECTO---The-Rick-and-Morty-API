@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu" rel="stylesheet">
+        <link rel="stylesheet" href="/css/subasta.css">
+        <link rel="shortcut icon" href="/img/logonuevo.png" type="image/x-icon">
+        <title>Subasta</title>
+</head>
+
+<body>
+    <div id="myApp">
+    <div class="login-page">
+        <div class="cont-login">
+            <div class="img-login"></div>
+            <div class="form">
+                <form  class="register-form">
+                    <section class="banner-login">
+                        <div class="container d-flex justify-content-start flex-column  mt-5 pt-5 ">
+
+                            <div class="contenedor-title-principal-2">
+                                <span class="title-principal-2 " id="titulo-albumes">Iniciar Sesion</span>
+                            </div>
+                        </div>
+                    </section>
+                    <input type="text" placeholder="name" />
+                    <input type="password" placeholder="password" />
+                    <input type="text" placeholder="email address" />
+                </form>
+                <form id="filter" class="login-form">
+                    <h1>{{tarjeta.name}}</h1>
+                    <h1>$50</h1>
+                    <input type="text"  placeholder="Ingresa el valor a proponer" required/>
+                    <button type="submit" >PROPONER</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</body>
+</html>
