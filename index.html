@@ -22,15 +22,11 @@
       <h4>ingrese su usuario</h4>
       
         <form class="" @submit.prevent>
-          <input type="text" id="user" v-model="user" title="Ingre su usuario" placeholder="usuario" required>
-          <input type="password" id="pass" maxlength="4" title="Ingrese su clave de 4 digitos" v-model="clave" placeholder="Clave"  required>
-          <input type="email" id="gmail" v-model="gmail" title="Ingrese su correo" placeholder="Correo" required>
-          <h4>No Tienes usuario?</h4>
+          <input type="text" id="user"  v-model="user" title="Ingre su usuario" placeholder="usuario" required>
+          <input type="password" id="pass" maxlength="4" title="Ingrese una clave de 4 digitos" v-model="clave" placeholder="Clave" required>
+          <input type="email" id="gmail"  v-model="gmail" title="Ingrese su correo" placeholder="Correo" required>
           <p>Registro Ahora</p>
           <button  @click="login">Login</button>
-      
-          
-          
         </form>
     </div>
 
@@ -44,7 +40,6 @@
           <input type="text" id="user"  v-model="user" title="Ingre su usuario" placeholder="usuario" required>
           <input type="password" id="pass" maxlength="4" title="Ingrese una clave de 4 digitos" v-model="clave" placeholder="Clave" required>
           <input type="email" id="gmail"  v-model="gmail" title="Ingrese su correo" placeholder="Correo" required>
-
           <button @click="registro">Registro</button>
         </form>
     </div>

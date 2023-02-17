@@ -21,6 +21,8 @@ methods: {
     }else{
       this.loginExitoso = false;
       alert("Usuario o Clave Incorrectos")
+      this.user = "";
+      this.clave = "";
     }
   },
   
@@ -34,6 +36,9 @@ methods: {
       });
       alert("Usuario Registrado Exitosamente");
       this.registroExitoso = true;
+      this.user = "";
+      this.clave = "";
+      this.gmail = "";
    
     }else{
       alert("Debe completar todos los campos");
