@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu" rel="stylesheet">
-    <link rel="stylesheet" href="/css/login.css">
-    <link rel="shortcut icon" href="/img/Rick_y_Morty_Serie_de_TV-157026175-large.jpg" type="image/x-icon">
-    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro</title>
+    <link rel="shortcut icon" href="img/logonuevo.png">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <div class="divlogin">
         <div class="container">
@@ -20,7 +17,7 @@
                     <input type="email" :class="{'error':validaEmail}" placeholder="Email" v-model="form.email">
                     <input type="password" v-if="form.type!=2" :class="{'error':validaPassword}" placeholder="Contraseña" v-model="form.password" >
                     <input type="password" v-if="form.type==1" :class="{'error':validaRepetirPassword}" placeholder="Repetir contraseña" v-model="form.passwordos" >
-                    <button>Iniciar sesión</button>
+                    <button @click="guardarUser">Iniciar sesión</button>
                     <a href="javascript:void(0)" @click="form.type=2" v-if="form.type!=2" >Recuper contraseña</a>
                     <a href="javascript:void(0)" @click="form.type=1" v-if="form.type!=1" >Registrarme</a>
                     <a href="javascript:void(0)" @click="form.type=0" v-if="form.type!=0" >Iniciar sesión</a>
@@ -28,7 +25,7 @@
             </div>            
         </div>
     </div>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="/js/app.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/registro.js"></script>
 </body>
 </html>
