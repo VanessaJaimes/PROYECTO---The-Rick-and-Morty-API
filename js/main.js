@@ -1,7 +1,6 @@
 const app = Vue.createApp({
     data() {
         return {
-            userscopia: [],
             tarjetas: [],
             userInput: '',
             passwordInput: ''
