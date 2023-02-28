@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu" rel="stylesheet">
+        <link rel="stylesheet" href="/css/subasta.css">
+        <link rel="shortcut icon" href="/img/logonuevo.png" type="image/x-icon">
+        <title>Subasta</title>
+</head>
+
+<body>
+    <div id="myApp">
+    <div class="">
+        <div class="">
+
+            <section class="">
+                <div class="">
+                    <h3>Pasarela de Compra de RickPotins</h3>
+                    <p>Datos para la compra de RickPotins</p>
+                </div>
+            </section>
+
+            <form action="" >
+   
+                <label for="ahorro">Cuenta de ahorro</label>
+                <input v-model="ahorro" type="radio" value="ahorro" >
+                <label  for="credito">Cuenta de credito</label>
+                <input v-model="credito" type="radio" value="credito"  >
+    
+                <button type="submit" @click="compraRickPotins">Confirmar Seleccion de pago</button>
+            </form>
+             
+        </div>
+
+    </div>
+</div>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="./js/cripto.js"></script>
+</body>
+</html>
